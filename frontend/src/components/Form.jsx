@@ -50,10 +50,10 @@ export default function Form({ setContacts, contacts }) {
                 <DialogTitle>Add Contact</DialogTitle>
                 <DialogContent>
                     <Box mb={2}>
-                        <TextField fullWidth name="name" disabled={isLoading} inputProps={{ maxLength: 20 }} placeholder="Enter name" value={formData.name} onChange={(e) => onChange(e)}/>
+                        <TextField fullWidth name="name" disabled={isLoading} inputProps={{ maxLength: 30 }} placeholder="Enter name" value={formData.name} onChange={(e) => onChange(e)}/>
                     </Box>
                     <Box mb={2}>
-                        <TextField fullWidth name="email" disabled={isLoading} inputProps={{ maxLength: 20 }} placeholder="Enter email" value={formData.email} onChange={(e) => onChange(e)}/>
+                        <TextField fullWidth name="email" disabled={isLoading} inputProps={{ maxLength: 40 }} placeholder="Enter email" value={formData.email} onChange={(e) => onChange(e)}/>
                     </Box>
                     <Box display="flex" alignItems="flex-end" justifyContent="flex-end" gap={2}>
                         <Button variant="outlined" onClick={() => setOpenModal(!openModal)} disabled={isLoading}>cancel</Button>
