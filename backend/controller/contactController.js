@@ -52,6 +52,7 @@ const updateContact = asyncHandler(async (req, res) => {
     res.status(200).json({ message: 'Data Updated Successfully!', data: updateData })
 })
 
+
 const removeContact = asyncHandler( async (req, res) => {
     const contact = await ContactModel.findById(req.params.id)
 

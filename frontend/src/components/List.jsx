@@ -16,7 +16,7 @@ export default function List({ name, email, _id, data, action, _index }) {
     const onRemove = async () => {
         setIsLoading(!isLoading)
         try{
-            const res = await axios.delete(`http://localhost:3000/api/contact/${_id}`)
+            const res = await axios.delete(`https://contatctapp-server.onrender.com/api/contact/${_id}`)
             if(res.status === 200){
                 let list = [...data]
                 toast.success('Contact Removed Successfully!')

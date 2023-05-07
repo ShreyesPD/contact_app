@@ -24,7 +24,7 @@ export default function Form({ setContacts, contacts }) {
     const onSubmit = async () => {
         setIsLoading(!isLoading)
         try{
-            const res = await axios.post('http://localhost:3000/api/contact', formData)
+            const res = await axios.post('https://contatctapp-server.onrender.com/api/contact', formData)
             toast.success('New Contact Added!')
             setIsLoading(false)
             setOpenModal(false)

@@ -20,7 +20,7 @@ export default function EditContact({ open, action, data, setData, list, updateL
     const onSubmit = async () => {
         setIsLoading(!isLoading)
         try{
-            const res = await axios.put(`http://localhost:3000/api/contact/${formData._id}`, formData)
+            const res = await axios.put(`https://contatctapp-server.onrender.com/${formData._id}`, formData)
             if(res.status === 200){
                 let d = list.map((v) => {
                     if(v._id === formData._id){

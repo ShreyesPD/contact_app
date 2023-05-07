@@ -9,7 +9,7 @@ export default function Content() {
 
     const fetchData = async () => {
         try{
-            const res = await axios.get('http://localhost:3000/api/contact')
+            const res = await axios.get('https://contatctapp-server.onrender.com/api/contact')
             setContacts(res.data)
         }catch(error){
             setContacts([])
